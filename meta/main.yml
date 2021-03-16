@@ -5,7 +5,7 @@ galaxy_info:
   author: Andrea Brandi
   description: Manage system timezone via systemd using timedatectl.
   license: MIT
-  min_ansible_version: 2.4
+  min_ansible_version: 2.9
   platforms:
   - name: ArchLinux
     versions:
