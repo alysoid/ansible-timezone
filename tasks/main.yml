@@ -1,9 +1,9 @@
 ---
-- name: Check timezone
-  command: "timedatectl show"
+- name: Check current timezone
+  ansible.builtin.command: timedatectl show
   register: timedatectl_current
   changed_when: false
 
-- name: Set timezone
-  command: timedatectl set-timezone {{ timezone }}
+- name: Set timezone to {{ timezone }}
+  ansible.builtin.command: timedatectl set-timezone {{ timezone }}
   changed_when: timezone not in timedatectl_current.stdout
